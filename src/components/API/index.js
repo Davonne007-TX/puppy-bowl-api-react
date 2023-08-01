@@ -9,17 +9,12 @@
 }
 
 /*fetches*/
-const cohortName = "2302-ACC-CT-WEB-PT-B";
-const API_URL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}`;
-
-const fetchAllPlayers = async () => {
-    try {
-        const response = await fetch(`${API_URL}`);
-        const result = await response.json();
-        return result.data.players;
-        
-    } catch (err) {
-        console.error('Uh oh, trouble fetching players!', err);
-    }
+export const fetchAllPlayers = async () => {
+    const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
+    const myPlayers = await response.json();
+    console.log("Puppy Players:", myPlayers);
+    return myPlayers.results;
 };
+
+fetchAllPlayers();
 
