@@ -11,9 +11,9 @@
 // /*fetches*/
 // export const fetchAllPlayers = async () => {
 //     const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
-//     const myPlayers = await response.json();
-//     console.log("Puppy Players:", myPlayers);
-//     return myPlayers.results;
+//      const myPlayers = await response.json();
+//      console.log("Puppy Players:", myPlayers);
+//       setPlayers(myPlayers.data.players); 
 // };
 
 // fetchAllPlayers();
