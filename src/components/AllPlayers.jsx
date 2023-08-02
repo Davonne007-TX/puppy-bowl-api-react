@@ -8,27 +8,29 @@ export default function AllPlayers({ setSelectedPlayer }) {
       const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
       const myPlayers = await response.json();
       console.log("Puppy Players:", myPlayers);
-      setPlayers(myPlayers.results);
-    };
+      setPlayers(myPlayers.data.players); 
+    }
 
     fetchAllPlayers();
   }, []);
+
 
 
   return (
     <>
     <section>
       <h1>Puppy Players</h1>
-        {/* {players.map((player) => {
+         {players.map((player) => {
           return (
-            <div key={player.id}>
+            <div key={player.id} className="puppy-container">
               <p>Name: {player.name}</p>
               <p>Breed: {player.breed}</p>
               <p>Status: {player.status}</p>
               <button type="button" className="seeDetails" onClick={() => setSelectedPlayer(player)}>See Details</button>
             </div>
           )
-        })} */}
+        })} 
+
 
     </section>
     </>
