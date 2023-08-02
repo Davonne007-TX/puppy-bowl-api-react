@@ -24,8 +24,13 @@ export default function AllPlayers({ setSelectedPlayer }) {
           return (
             <div key={player.id} className="puppy-container">
               <p>Name: {player.name}</p>
+              <img src={player.imageUrl} className="dogImages" />
               <p>Breed: {player.breed}</p>
-              <p>Status: {player.status}</p>
+              <p>Cohort Id: {player.cohortId}</p>
+              <p>ID: {player.id}</p>
+              <p>{player.cohortId}</p>
+              <p>Status {player.status}</p>
+
               <button type="button" className="seeDetails" onClick={() => setSelectedPlayer(player)}>See Details</button>
             </div>
           )

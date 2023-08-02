@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>Puppy Bowl</h1>
+      <h1>Puppy Bowl 2023</h1>
 
       {selectedPlayer ? (
         <SinglePlayer player={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />

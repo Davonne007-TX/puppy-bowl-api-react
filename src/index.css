@@ -24,6 +24,19 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
- 
 }
 
+.dogImages {
+  width: 100%;
+  max-width: 500px;
+}
+
+.puppy-container { 
+ width: 100%;
+ max-width: 700px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ padding-bottom: 80px;
+
+}
