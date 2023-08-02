@@ -3,23 +3,26 @@ import React, { useState, useEffect } from 'react';
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
 
-  useEffect(() => {
-    const fetchAllPlayers = async () => {
-      const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
-      const myPlayers = await response.json();
-      console.log("Puppy Players:", myPlayers);
-      setPlayers(myPlayers.data.players); 
-    }
-
-    fetchAllPlayers();
-  }, []);
-
-
+useEffect(() => {
+  const fetchAllPlayers = async () => {
+  try {
+     const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
+        const myPlayers = await response.json();
+        console.log("Puppy Players:", myPlayers);
+        setPlayers(myPlayers.data.players); 
+  
+  } catch (error){
+    console.log("Error", error);
+  }
+}
+   fetchAllPlayers()
+}, [])
 
   return (
     <>
     <section>
       <h2>Puppy Players</h2>
+
          {players.map((player) => {
           return (
             <div key={player.id} className="puppy-container">
@@ -27,19 +30,17 @@ export default function AllPlayers({ setSelectedPlayer }) {
               <img src={player.imageUrl} className="dogImages" />
               <p>Breed: {player.breed}</p>
               <p>Cohort Id: {player.cohortId}</p>
+              <p>Created At: {player.createdAt}</p>
               <p>ID: {player.id}</p>
-              <p>{player.cohortId}</p>
               <p>Status {player.status}</p>
+              <p>Team Id: {player.teamId}</p>
+              <p>Updated At: {player.updatedAt}</p>
 
               <button type="button" className="seeDetails" onClick={() => setSelectedPlayer(player)}>See Details</button>
             </div>
           )
         })} 
-
-
     </section>
     </>
-   
-    
   )
 }
