@@ -42,6 +42,10 @@ export default function NewForm() {
         }
     }
 
+    function getConsole() {
+        console.log("Did this work");
+    }
+
   return (
     <div className="newForm">
         <form onSubmit={submitThisForm}>
@@ -98,7 +102,7 @@ export default function NewForm() {
                 onChange={(e) => setUpdatedAt(e.target.value)} />
             </label>
 
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={getConsole}>Submit</button>
         </form>
           
     </div>
