@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { useState } from 'react'
 
 export default function NewForm() {
@@ -12,30 +11,40 @@ export default function NewForm() {
     const [teamId, setTeamId] = useState("")
     const[updatedAt, setUpdatedAt] = useState("");
 
-  useEffect(() => {
-    async function newFormEntry(addedPlayer) {
+    const submitThisForm = async (e) => {
+        e.preventDefault();
+
+        const addedPuppy = {
+            name, 
+            breed,
+            cohortId,
+            createdAt,
+            imageUrl,
+            id,
+            status,
+            teamId,
+            updatedAt
+        }
+    
         try {
-            const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/COHORT-NAME/players", {
+            const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify(addedPlayer)
+                body: JSON.stringify(addedPuppy)
             });
 
-            const result = await response.son();
+            const result = await response.json();
             console.log(result);
-
         } catch (error){
             console.log("Error", error)
         }
     }
-   
-  }, [])
 
   return (
     <div className="newForm">
-        <form>
+        <form onSubmit={submitThisForm}>
             <label>
                 Name: <input 
                 value={name}
@@ -89,7 +98,7 @@ export default function NewForm() {
                 onChange={(e) => setUpdatedAt(e.target.value)} />
             </label>
 
-            <button type="button">Submit</button>
+            <button type="submit">Submit</button>
         </form>
           
     </div>
