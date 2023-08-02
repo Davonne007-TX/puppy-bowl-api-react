@@ -25,6 +25,7 @@ export default function AllPlayers({ setSelectedPlayer }) {
               <p>Name: {player.name}</p>
               <p>Breed: {player.breed}</p>
               <p>Status: {player.status}</p>
+              <button type="button" className="seeDetails" onClick={() => setSelectedPlayer(player)}>See Details</button>
             </div>
           )
         })} */}
