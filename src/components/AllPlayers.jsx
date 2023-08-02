@@ -4,7 +4,7 @@ import SearchBar from './SearchBar'
 
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
-  const[searchQuery, setSearchQuery] = useState("")
+  const[searchPlayers, setSearch] = useState("")
 
 useEffect(() => {
   const fetchAllPlayers = async () => {
@@ -21,20 +21,18 @@ useEffect(() => {
    fetchAllPlayers()
 }, []);
 
-const handelSearchInput = (event) => {
-  setSearchQuery(event.target.value)
+const handelSearchInput = (options) => {
+  setSearch(options)
 };
 
 const filteredPuppies = players.filter((player) => 
-player.name.toLowerCase().includes(searchQuery.toLowerCase())) 
+player.name.toLowerCase().includes(searchPlayers.toLowerCase())) 
 
   return (
     <>
     <section>
       <h2>Puppy Players</h2>
-      {/* <NewForm /> */}
-
-      <SearchBar value={searchQuery} onChange={handelSearchInput} />
+      <SearchBar value={searchPlayers} onChange={handelSearchInput} />
 
         {filteredPuppies.map((player) => {
           return (
@@ -57,3 +55,5 @@ player.name.toLowerCase().includes(searchQuery.toLowerCase()))
     </>
   )
 }
+
+

@@ -1,22 +1,27 @@
-import React from 'react'
-import {useState} from 'react'
-import { FaSearch } from 'react-icons/fa'
-import './SearchBar.css'
+import React, { useState } from 'react';
+import './SearchBar.css';
 
-export default function SearchBar() {
-    const [input, setInput] = useState("")
+export default function SearchBar({ value, onChange }) {
+  const [input, setInput] = useState(value);
+
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    setInput(inputValue);
+    onChange(inputValue); 
+  };
 
   return (
     <div className="search">
-      <FaSearch id="search-icon" /> 
-        <input 
+      <input
         type="text"
         placeholder="Search"
         value={input}
         className="searchBar"
-        onChange={(e) => setInput(e.target.value)}
-        />
-        
+        onChange={handleInputChange}
+      />
     </div>
-  )
+  );
 }
+
+
+
