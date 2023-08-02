@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SinglePlayer({player}) {
+export default function SinglePlayer({player, setSelectedPlayer}) {
 
   return (
     <div className="puppies-container">
@@ -12,7 +12,8 @@ export default function SinglePlayer({player}) {
         <p>ID: {player.id}</p>
         <p>{player.cohortId}</p>
         <p>Status {player.status}</p>
-        <button onSubmit="" className="backButton">Back to List</button>
+        <button className="goBack" onClick={() => setSelectedPlayer(null)}>
+          Back to List</button>
    </div>
   )
 }
