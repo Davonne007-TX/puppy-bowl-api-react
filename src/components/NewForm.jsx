@@ -42,6 +42,7 @@ export default function NewForm() {
         }
     }
 
+    //testing submit button
     function getConsole() {
         console.log("Did this work");
     }
