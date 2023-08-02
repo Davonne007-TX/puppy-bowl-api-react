@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <h1>Puppy Bowl 2023</h1>
-      <NewForm />
-  
+      <NewForm/>
+
       {selectedPlayer ? (
         <SinglePlayer player={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />
       ) : (

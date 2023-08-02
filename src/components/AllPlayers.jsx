@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import NewForm from './components/NewForm' //I do do not the form rendered on every page so do I need to have this here, to gave NewFrom.jsx on here
 
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
@@ -22,8 +23,9 @@ useEffect(() => {
     <>
     <section>
       <h2>Puppy Players</h2>
+      {/* <NewForm /> */}
 
-         {players.map((player) => {
+        {players.map((player) => {
           return (
             <div key={player.id} className="puppy-container">
               <p>Name: {player.name}</p>

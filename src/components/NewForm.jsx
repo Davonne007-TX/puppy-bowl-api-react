@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './Form.css'
 
 export default function NewForm() {
     const [name, setName] = useState("")
@@ -49,6 +50,7 @@ export default function NewForm() {
 
   return (
     <div className="newForm">
+          <h3>Please fill out form for New Player Entry:</h3><br/>
         <form onSubmit={submitThisForm}>
             <label>
                 Name: <input 

@@ -1,0 +1,20 @@
+/*New Player Added - Form*/
+
+.newForm {
+    width: 100%;
+    border: 2px solid white;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+form {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 10px;
+
+}
