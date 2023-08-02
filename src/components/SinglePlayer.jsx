@@ -17,3 +17,6 @@ export default function SinglePlayer({player, setSelectedPlayer}) {
    </div>
   )
 }
+
+
+

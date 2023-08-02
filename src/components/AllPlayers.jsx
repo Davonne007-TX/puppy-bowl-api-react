@@ -19,7 +19,7 @@ export default function AllPlayers({ setSelectedPlayer }) {
   return (
     <>
     <section>
-      <h1>Puppy Players</h1>
+      <h2>Puppy Players</h2>
          {players.map((player) => {
           return (
             <div key={player.id} className="puppy-container">
