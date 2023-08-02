@@ -1,0 +1,16 @@
+/*search bar*/
+.search {
+    width: 100%;
+}
+
+.searchBar {
+   font-family: cursive;
+   background-color: lightgrey;
+   color: black;
+   font-size: 12pt;
+   padding: 10px;
+   border-radius: 8px;
+   position: relative;
+
+}
+

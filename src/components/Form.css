@@ -18,3 +18,12 @@ flex-wrap: wrap;
 gap: 10px;
 
 }
+
+/*search bar*/
+.search {
+    width: 100%;
+}
+
+.searchBar {
+   font-family: cursive;
+}

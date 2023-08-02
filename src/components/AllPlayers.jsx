@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import SearchBar from './SearchBar'
 // import NewForm from './components/NewForm' //I do do not the form rendered on every page so do I need to have this here, to gave NewFrom.jsx on here
 
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
+  const[searchQuery, setSearchQuery] = useState("")
 
 useEffect(() => {
   const fetchAllPlayers = async () => {
@@ -17,7 +19,14 @@ useEffect(() => {
   }
 }
    fetchAllPlayers()
-}, [])
+}, []);
+
+const handelSearchInput = (event) => {
+  setSearchQuery(event.target.value)
+};
+
+const filteredPuppies = players.filter((player) => 
+player.name.toLowerCase().includes(searchQuery.toLowerCase())) 
 
   return (
     <>
@@ -25,7 +34,9 @@ useEffect(() => {
       <h2>Puppy Players</h2>
       {/* <NewForm /> */}
 
-        {players.map((player) => {
+      <SearchBar value={searchQuery} onChange={handelSearchInput} />
+
+        {filteredPuppies.map((player) => {
           return (
             <div key={player.id} className="puppy-container">
               <p>Name: {player.name}</p>
