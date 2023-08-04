@@ -70,6 +70,18 @@ section {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .puppy-container {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .puppy-container {
+    width: 250px;
+  }
+}
+
 h2 {
   font-family: 'Luckiest Guy', cursive;
   padding-top: 20px;
@@ -112,7 +124,6 @@ p {
 .deleteButton:hover {
   color: black;
 }
-
 
 /*SinglePlayer Component */
 .singlePuppy-container {
