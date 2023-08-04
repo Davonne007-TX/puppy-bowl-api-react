@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient( 120deg, #000915, #002049);
+  background-color: #4D45DB;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,4 +44,39 @@ section {
 
 h2 {
   font-family: 'Luckiest Guy', cursive;
+  padding-top: 20px;
+  font-size: 24pt;
 }
+
+.puppiesName {
+  font-family: 'Dela Gothic One', cursive;
+
+}
+
+.searchDescription {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.myButton, .deleteButton{
+  background-color: #4D45DB;
+  padding: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 150px;
+  font-size: 14pt;
+}
+
+.myButton {
+  margin: 20px;
+}
+
+.myButton:hover {
+  color: black;
+}
+
+.deleteButton:hover {
+  color: black;
+}
+
+

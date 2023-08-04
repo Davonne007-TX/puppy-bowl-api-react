@@ -31,13 +31,14 @@ player.name.toLowerCase().includes(searchPlayers.toLowerCase()))
   return (
     <>
     <section>
-      <h2>Puppy Players</h2>
+      <h2>Our Puppy Competitors</h2>
+      <p className="searchDescription">Search for player below &#x2199;</p>
       <SearchBar value={searchPlayers} onChange={handelSearchInput} />
 
         {filteredPuppies.map((player) => {
           return (
             <div key={player.id} className="puppy-container">
-              <p>Name: {player.name}</p>
+              <p className="puppiesName">Name: {player.name}</p>
               <img src={player.imageUrl} className="dogImages" />
               <p>Breed: {player.breed}</p>
               <p>Cohort Id: {player.cohortId}</p>
@@ -47,7 +48,8 @@ player.name.toLowerCase().includes(searchPlayers.toLowerCase()))
               <p>Team Id: {player.teamId}</p>
               <p>Updated At: {player.updatedAt}</p>
 
-              <button type="button" className="seeDetails" onClick={() => setSelectedPlayer(player)}>See Details</button>
+              <button type="button" className="myButton" onClick={() => setSelectedPlayer(player)}>See Details</button>
+              <button type="button" className="deleteButton">Delete Player</button><hr/>
             </div>
           )
         })} 
