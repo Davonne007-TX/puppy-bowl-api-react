@@ -11,7 +11,7 @@ export default function NewForm() {
     const [status, setStatus] = useState("")
     const [teamId, setTeamId] = useState("")
     const[updatedAt, setUpdatedAt] = useState("");
-
+ 
     // const [fjkf,fef] = useState ({
     //     name: "",
     //     breed: "",
@@ -52,6 +52,22 @@ export default function NewForm() {
 
     //testing submit button
     function getConsole() {
+
+        useEffect(() => {  
+            const fetchForm = async () => {
+              const newForm = await submitThisForm();
+              setForm(newForm);
+          
+      
+              
+            };
+            fetchForm();
+          }, []);
+
+
+
+
+
         console.log("Did this work");
         alert("Successfully added new puppy to the roster, scroll through dogs to find yours!")
     }
@@ -59,61 +75,76 @@ export default function NewForm() {
   return (
     <div className="newForm">
           <h3>Please fill out form for New Player Entry:</h3><br/>
-        <form onSubmit={submitThisForm}>
+
+          <form onSubmit={submitThisForm}>
             <label>
-                Name: <input 
-                value={name}
-                onChange={(e) => setName(e.target.value)} />
+                Name: {""}
+                <input 
+                 value={name}
+                 onChange={(e) => setName(e.target.value)} />
             </label>
 
             <label>
                 Breed: {""} 
                 <input 
-                value={breed}
-                onChange={(e) => setBreed(e.target.value) } />
+                 value={breed}
+                 onChange={(e) => setBreed(e.target.value) } />
             </label>
 
             <label>
                 Image URL: {""} 
                 <input 
-                value={imageUrl}
-                onChange={(e) => setImageUrl(e.target.value) } />
+                 value={imageUrl}
+                 onChange={(e) => setImageUrl(e.target.value) } />
             </label>
 
 
             <label>
                 Cohort Id: {""}
                  <input 
-                 value={cohortId}
-                 onChange={(e) => setCohortId(e.target.value)} />
+                  value={cohortId}
+                  onChange={(e) => setCohortId(e.target.value)} />
             </label>
 
             <label>
-               Created At: <input value={createdAt}
-               onChange={(e) => setCreatedAt(e.target.value)} />
+               Created At: {""} 
+               <input 
+                value={createdAt}
+                onChange={(e) => setCreatedAt(e.target.value)} />
             </label>
 
             <label>
-                ID: <input value={id}
-                onChange={(e) => setId(e.target.value)} />
+                ID: {""}
+                <input 
+                 value={id}
+                 onChange={(e) => setId(e.target.value)} />
             </label>
 
             <label>
-                Status: <input value={status}
-                onChange={(e) => setStatus(e.target.value)} /> 
+                Status: {""}
+                <input 
+                 value={status}
+                 onChange={(e) => setStatus(e.target.value)} /> 
             </label>
 
             <label>
-                Team Id: <input value={teamId}
+                Team Id: {""} 
+                <input 
+                 value={teamId}
                  onChange={(e) => setTeamId(e.target.value)} />  
             </label>
 
             <label>
-                Updated At: <input value={updatedAt}
-                onChange={(e) => setUpdatedAt(e.target.value)} />  
+                Updated At: {""} 
+                <input 
+                 value={updatedAt}
+                 onChange={(e) => setUpdatedAt(e.target.value)} />  
             </label>
 
-            <button type="submit" className="submitButton" onClick={getConsole}>Submit</button>
+            <button
+             type="submit" 
+             className="submitButton" 
+             onClick={getConsole}>Submit</button>
         </form>
     </div>
   )

@@ -10,13 +10,16 @@ export default function SinglePlayer({player, setSelectedPlayer}) {
         <p>Breed: {player.breed}</p>
         <p>Cohort Id: {player.cohortId}</p>
         <p>ID: {player.id}</p>
-        <p>{player.cohortId}</p>
+        <p>Team Id: {player.teamId}</p>
         <p>Status {player.status}</p>
         <button className="goBack" onClick={() => setSelectedPlayer(null)}>
           Back to List</button>
    </div>
   )
 }
+
+
+
 
 
 

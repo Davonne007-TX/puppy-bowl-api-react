@@ -1,6 +1,5 @@
 import './App.css'
 import { useState } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
 import AllPlayers from './components/AllPlayers'
 import SinglePlayer from './components/SinglePlayer'
 import NewForm from './components/NewForm'
@@ -24,6 +23,7 @@ function App() {
 }
 
 export default App
+
 
 
 

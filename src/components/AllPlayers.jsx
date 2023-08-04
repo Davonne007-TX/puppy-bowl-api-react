@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar'
-import { deletePlayer } from "./API"
-import { fetchAllPlayers } from "./API"
+import { fetchAllPlayers, fetchTeams, deletePlayer } from "./API"
 // import NewForm from './components/NewForm' //I do not the form rendered on every page so do I need to have this here, to gave NewFrom.jsx on here
 
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
   const[searchPlayers, setSearch] = useState("")
-  const[teams, setTeams] = useState("")
+  const[teams, setTeams] = useState([])
 
 //Fetch All Players
 useEffect(() => {  
   const fetchPlayers = async () => {
     const playersData = await fetchAllPlayers();
     setPlayers(playersData);
+
+    const teamsData = await fetchTeams();
+    setTeams(teamsData);
+    
   };
   fetchPlayers();
 }, []);
@@ -47,6 +50,7 @@ const handleDelete = async (playerId) => {
       <SearchBar value={searchPlayers} onChange={handelSearchInput} />
 
         {filteredPuppies.map((player) => {
+
           return (
             <div key={player.id} className="puppy-container">
               <p className="puppiesName">Name: {player.name}</p>

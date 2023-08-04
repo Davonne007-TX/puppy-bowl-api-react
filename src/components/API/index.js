@@ -1,4 +1,3 @@
-
 /*fetches all players*/
 export const fetchAllPlayers = async () => {
     try {
@@ -16,9 +15,12 @@ export const fetchAllPlayers = async () => {
 //delete a puppy 
 export const deletePlayer = async (playerId) => {
     try {
-        const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-PT-B/players/${playerId}`", {
+        const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-PT-B/players/${playerId}`, {
             method: 'DELETE',
         })
+        const result = await response.json()
+        console.log(result)
+        
     } catch (error) {
         console.log("Error", error)
 
@@ -27,47 +29,16 @@ export const deletePlayer = async (playerId) => {
 
 //fetch teams
 export const fetchTeams = async () => {
-    try{
+    try {
+        const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-B/teams")
+        const teamsData = await response.json();
+        console.log("Teams:", teamsData);
+        return teamsData.data;
 
     } catch (error) {
         console.log("Error", error)
+        return[]
 
     }
 }
-
-
-
-
-//New Form - New Puppy Bowl Contender
-// const submitThisForm = async (e) => {
-//     e.preventDefault();
-
-//     const addedPuppy = {
-//         name, 
-//         breed,
-//         cohortId,
-//         createdAt,
-//         imageUrl,
-//         id,
-//         status,
-//         teamId,
-//         updatedAt
-//     }
-
-//     try {
-//         const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify(addedPuppy)
-//         });
-
-//         const result = await response.json();
-//         console.log(result);
-
-//     } catch (error){
-//         console.log("Error", error)
-//     }
-// }
 
