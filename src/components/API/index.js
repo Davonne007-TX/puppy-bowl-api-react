@@ -25,6 +25,16 @@ export const deletePlayer = async (playerId) => {
     }
 }
 
+//fetch teams
+export const fetchTeams = async () => {
+    try{
+
+    } catch (error) {
+        console.log("Error", error)
+
+    }
+}
+
 
 
 
