@@ -44,7 +44,7 @@ export default function NewForm() {
 
             const result = await response.json();
             console.log(result);
-            
+
         } catch (error){
             console.log("Error", error)
         }
@@ -53,6 +53,7 @@ export default function NewForm() {
     //testing submit button
     function getConsole() {
         console.log("Did this work");
+        alert("Successfully added new puppy to the roster, scroll through dogs to find yours!")
     }
 
   return (

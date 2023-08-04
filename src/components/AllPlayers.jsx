@@ -1,33 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar'
-import { Link } from 'react-router-dom'
+import { deletePlayer } from "./API"
+import { fetchAllPlayers } from "./API"
 // import NewForm from './components/NewForm' //I do not the form rendered on every page so do I need to have this here, to gave NewFrom.jsx on here
 
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
   const[searchPlayers, setSearch] = useState("")
 
-useEffect(() => {
-  const fetchAllPlayers = async () => {
-  try {
-     const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
-        const myPlayers = await response.json();
-        console.log("Puppy Players:", myPlayers);
-        setPlayers(myPlayers.data.players); 
-  
-  } catch (error){
-    console.log("Error", error);
-  }
-}
-   fetchAllPlayers()
+//Fetch All Players
+useEffect(() => {  
+  const fetchPlayers = async () => {
+    const playersData = await fetchAllPlayers();
+    setPlayers(playersData);
+  };
+  fetchPlayers();
 }, []);
 
+//Search Bar
 const handelSearchInput = (options) => {
   setSearch(options)
 };
 
 const filteredPuppies = players.filter((player) => 
 player.name.toLowerCase().includes(searchPlayers.toLowerCase())) 
+
+//Delete Function
+const handleDelete = async (playerId) => {
+  try {
+    await deletePlayer(playerId);
+    const updatedPlayers = players.filter((player) => player.id != playerId)
+    setPlayers(updatedPlayers);
+
+  } catch (error) {
+    console.log("Error", error)
+  }
+}
 
   return (
     <>
@@ -50,8 +58,17 @@ player.name.toLowerCase().includes(searchPlayers.toLowerCase()))
               <p>Team Id: {player.teamId}</p>
               <p>Updated At: {player.updatedAt}</p>
 
-              <button type="button" className="myButton" onClick={() => setSelectedPlayer(player)}>See Details</button>
-              <button type="button" className="deleteButton">Delete Player</button>
+              <button
+               type="button" 
+               className="myButton" 
+               onClick={() => setSelectedPlayer(player)}>
+               See Details</button>
+
+              <button
+               type="button" 
+               className="deleteButton" 
+               onClick={() => handleDelete(player.id)}>
+                Delete Player</button>
             </div>
           )
         })} 

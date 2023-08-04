@@ -1,25 +1,29 @@
-{
-    /*
-        this is where we put our fetches 
-        - don't use useEffect
 
-        - basic fetch 
-        - exporting api function from this file and components file will import these functions (rfc) 
-    */
+/*fetches all players*/
+export const fetchAllPlayers = async () => {
+    try {
+        const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
+        const myPlayers = await response.json();
+        console.log("Puppy Players:", myPlayers);
+        return myPlayers.data.players
+          
+    } catch (error){
+      console.log("Error", error);
+      return[]
+    }
 }
-
-// /*fetches*/
-// export default fetchAllPlayers = async (players) => {
-//     try {
-//         const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT/players");
-//         const result = await response.json();
-//         // setPlayers(myPlayers.data.players);  //how do we define setPlayers
         
-//     } catch (err) {
-//         console.error('Uh oh, trouble fetching players!', err);
-//     }
-// };
+//delete a puppy 
+export const deletePlayer = async (playerId) => {
+    try {
+        const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-PT-B/players/${playerId}`", {
+            method: 'DELETE',
+        })
+    } catch (error) {
+        console.log("Error", error)
 
+    }
+}
 
 
 
