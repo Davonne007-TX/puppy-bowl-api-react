@@ -113,7 +113,7 @@ export default function NewForm() {
                 onChange={(e) => setUpdatedAt(e.target.value)} />  
             </label>
 
-            <button type="submit" onClick={getConsole}>Submit</button>
+            <button type="submit" className="submitButton" onClick={getConsole}>Submit</button>
         </form>
           
     </div>

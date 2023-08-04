@@ -20,9 +20,30 @@ form {
   align-content: center;
   flex-wrap: wrap;
   gap: 10px;
+  font-family: cursive;
+  font-size: 16pt;
 }
 
 input {
     background-color: white;
-    color: black
+    color: black;
+    border-radius: 10px;
+    font-size: 12pt;
+    font-family: cursive;
+}
+
+.submitButton {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100px;
+    font-size: 14pt;
+}
+
+.submitButton:hover {
+    color:  #4D45DB;
+    cursor: pointer;
 }
