@@ -17,7 +17,7 @@ useEffect(() => {
     const teamsData = await fetchTeams();
     setTeams(teamsData);
     
-  };
+  }
   fetchPlayers();
 }, []);
 
@@ -26,7 +26,7 @@ const handelSearchInput = (options) => {
   setSearch(options)
 };
 
-const filteredPuppies = players.filter((player) => 
+const searchedPuppies = players.filter((player) => 
 player.name.toLowerCase().includes(searchPlayers.toLowerCase())) 
 
 //Delete Function
@@ -49,7 +49,7 @@ const handleDelete = async (playerId) => {
 
       <SearchBar value={searchPlayers} onChange={handelSearchInput} />
 
-        {filteredPuppies.map((player) => {
+        {searchedPuppies.map((player) => {
 
           return (
             <div key={player.id} className="puppy-container">

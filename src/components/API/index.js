@@ -8,7 +8,7 @@ export const fetchAllPlayers = async () => {
           
     } catch (error){
       console.log("Error", error);
-      return[]
+    //   return[]
     }
 }
         
@@ -27,7 +27,7 @@ export const deletePlayer = async (playerId) => {
     }
 }
 
-//fetch teams
+//fetches teams
 export const fetchTeams = async () => {
     try {
         const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-PT-B/teams")
