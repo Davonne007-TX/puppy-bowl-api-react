@@ -14,7 +14,7 @@ function App() {
       <NewForm />
        
       {selectedPlayer ? (
-        <SinglePlayer player={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />
+        <SinglePlayer selectedPlayer={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />
       ) : (
         <AllPlayers setSelectedPlayer={setSelectedPlayer} />
       )}
