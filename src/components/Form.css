@@ -9,6 +9,7 @@
     display: block;
     padding-bottom: 40px;
     margin-top: 20px;
+    border-radius: 12px;
 }
 
 form {
@@ -17,13 +18,6 @@ flex-direction: row;
 flex-wrap: wrap;
 gap: 10px;
 
+
 }
 
-/*search bar*/
-.search {
-    width: 100%;
-}
-
-.searchBar {
-   font-family: cursive;
-}

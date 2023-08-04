@@ -9,14 +9,20 @@
 }
 
 // /*fetches*/
-// export const fetchAllPlayers = async () => {
-//     const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT-B/players");
-//      const myPlayers = await response.json();
-//      console.log("Puppy Players:", myPlayers);
-//       setPlayers(myPlayers.data.players); 
+// export default fetchAllPlayers = async (players) => {
+//     try {
+//         const response = await fetch("https://fsa-puppy-bowl.herokuapp.com/api/2302-ACC-CT-WEB-PT/players");
+//         const result = await response.json();
+//         // setPlayers(myPlayers.data.players);  //how do we define setPlayers
+        
+//     } catch (err) {
+//         console.error('Uh oh, trouble fetching players!', err);
+//     }
 // };
 
-// fetchAllPlayers();
+
+
+
 
 //New Form - New Puppy Bowl Contender
 // const submitThisForm = async (e) => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar'
-// import NewForm from './components/NewForm' //I do do not the form rendered on every page so do I need to have this here, to gave NewFrom.jsx on here
+// import NewForm from './components/NewForm' //I do not the form rendered on every page so do I need to have this here, to gave NewFrom.jsx on here
 
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);

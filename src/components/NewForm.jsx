@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react'   
+
 import './Form.css'
 
 export default function NewForm() {
@@ -11,6 +12,13 @@ export default function NewForm() {
     const [status, setStatus] = useState("")
     const [teamId, setTeamId] = useState("")
     const[updatedAt, setUpdatedAt] = useState("");
+
+    // const [fjkf,fef] = useState ({
+    //     name: "",
+    //     breed: "",
+    //    etc
+    // })
+
 
     const submitThisForm = async (e) => {
         e.preventDefault();
@@ -102,7 +110,7 @@ export default function NewForm() {
 
             <label>
                 Updated At: <input value={updatedAt}
-                onChange={(e) => setUpdatedAt(e.target.value)} />
+                onChange={(e) => setUpdatedAt(e.target.value)} />  
             </label>
 
             <button type="submit" onClick={getConsole}>Submit</button>
@@ -111,3 +119,9 @@ export default function NewForm() {
     </div>
   )
 }
+
+
+{
+    /* onSubmit instead of onChange
+    
+    */}
