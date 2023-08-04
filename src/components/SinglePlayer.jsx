@@ -5,7 +5,7 @@ export default function SinglePlayer({player, setSelectedPlayer}) {
   return (
     <div className="singlePuppy-container">
       <h2>You have Selected Puppy Contender &#x2199;</h2>
-        <p>Name: {player.name}</p>
+        <p className="puppiesName">Name: {player.name}</p>
         <img src={player.imageUrl} className="dogImages" />
         <p>Breed: {player.breed}</p>
         <p>Cohort Id: {player.cohortId}</p>

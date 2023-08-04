@@ -42,7 +42,6 @@ section {
  margin-right: auto;
  padding-bottom: 40px;
  border-radius: 12px;
-
 }
 
 h2 {
@@ -89,13 +88,24 @@ p {
 }
 
 
-/*SinglePlayer.jsx css */
+/*SinglePlayer Component */
 .singlePuppy-container {
   background-color: black;
   width: 100%;
   padding-bottom: 20px;
   border-radius: 12px;
- 
+}
 
+.goBack {
+  background-color: #4D45DB;
+  padding: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 150px;
+  font-size: 14pt;
+}
 
+.goBack:hover {
+  color: black;
 }
