@@ -49,7 +49,7 @@ player.name.toLowerCase().includes(searchPlayers.toLowerCase()))
               <p>Updated At: {player.updatedAt}</p>
 
               <button type="button" className="myButton" onClick={() => setSelectedPlayer(player)}>See Details</button>
-              <button type="button" className="deleteButton">Delete Player</button><hr/>
+              <button type="button" className="deleteButton">Delete Player</button>
             </div>
           )
         })} 

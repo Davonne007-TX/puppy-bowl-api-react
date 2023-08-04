@@ -3,7 +3,7 @@ import React from 'react'
 export default function SinglePlayer({player, setSelectedPlayer}) {
 
   return (
-    <div className="puppies-container">
+    <div className="singlePuppy-container">
       <h2>You have Selected Puppy Contender &#x2199;</h2>
         <p>Name: {player.name}</p>
         <img src={player.imageUrl} className="dogImages" />
