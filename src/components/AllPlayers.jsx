@@ -7,6 +7,7 @@ import { fetchAllPlayers } from "./API"
 export default function AllPlayers({ setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
   const[searchPlayers, setSearch] = useState("")
+  const[teams, setTeams] = useState("")
 
 //Fetch All Players
 useEffect(() => {  
