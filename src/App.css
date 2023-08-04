@@ -11,3 +11,9 @@ h1 {
   padding-bottom: 20px;
   font-size: 2.5em;
 }
+
+.mainPic {
+  width: 100%;
+  max-width: 1000px;
+
+}

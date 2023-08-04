@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar'
+import { Link } from 'react-router-dom'
 // import NewForm from './components/NewForm' //I do not the form rendered on every page so do I need to have this here, to gave NewFrom.jsx on here
 
 export default function AllPlayers({ setSelectedPlayer }) {
@@ -33,6 +34,7 @@ player.name.toLowerCase().includes(searchPlayers.toLowerCase()))
     <section>
       <h2>Our Puppy Competitors</h2>
       <p className="searchDescription">Search for player below &#x2199;</p>
+
       <SearchBar value={searchPlayers} onChange={handelSearchInput} />
 
         {filteredPuppies.map((player) => {

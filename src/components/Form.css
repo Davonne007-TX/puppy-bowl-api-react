@@ -3,11 +3,11 @@
 .newForm {
     width: 100%;
     border: 2px solid white;
-    max-width: 380px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding-bottom: 40px;
+    padding-bottom: 2cqb;
     margin-top: 20px;
     border-radius: 12px;
 }
@@ -30,6 +30,7 @@ input {
     border-radius: 10px;
     font-size: 12pt;
     font-family: cursive;
+    width: 400px;
 }
 
 .submitButton {

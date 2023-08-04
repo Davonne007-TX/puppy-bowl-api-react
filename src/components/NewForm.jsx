@@ -1,5 +1,4 @@
-import { useState } from 'react'   
-
+import { useState } from 'react'  
 import './Form.css'
 
 export default function NewForm() {
@@ -18,7 +17,6 @@ export default function NewForm() {
     //     breed: "",
     //    etc
     // })
-
 
     const submitThisForm = async (e) => {
         e.preventDefault();
@@ -46,6 +44,7 @@ export default function NewForm() {
 
             const result = await response.json();
             console.log(result);
+            
         } catch (error){
             console.log("Error", error)
         }
@@ -115,7 +114,6 @@ export default function NewForm() {
 
             <button type="submit" className="submitButton" onClick={getConsole}>Submit</button>
         </form>
-          
     </div>
   )
 }
