@@ -42,7 +42,7 @@ section {
 
 .puppy-container { 
  width: 100%;
- max-width: 700px;
+ max-width: 800px;
  display: block;
  background-color: black;
  margin-left: auto;
@@ -55,6 +55,18 @@ section {
 @media screen and (max-width: 600px) {
   .puppy-container {
     width: 270px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .puppy-container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .puppy-container {
+    width: 400px;
   }
 }
 
