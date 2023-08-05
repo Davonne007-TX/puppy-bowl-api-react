@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Form.css'
-// import { useNavigate } from 'react-router-dom'
 
 export default function NewForm() {
   const [name, setName] = useState("")
@@ -46,11 +46,12 @@ export default function NewForm() {
     }
   }
 
-//   function alertMessage() {
-//     alert("You have added a new dog for our Puppy Bowl 2023!")
-//   }
+  //useNavigate
+  const navigateToAllPlayers = () => {
+  navigate('/allPlayers');
+  }
 
-//   let navigate = useNavigate();
+  let navigate = useNavigate();
 
   return (
     <div className="newForm">
@@ -124,8 +125,11 @@ export default function NewForm() {
         <button
           type="submit"
           className="submitButton">Submit</button>
-{/* 
-          <button onClick={() => {navigate('/allPlayers')}}>Back to Player</button> */}
+
+         <button 
+         type="button"
+         className="backButton"
+         onClick={navigateToAllPlayers}>Back to Puppies</button>
       </form>
     </div>
   )

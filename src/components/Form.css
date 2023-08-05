@@ -51,14 +51,14 @@ input {
     }
 }
 
-.submitButton {
+.submitButton, .backButton {
     background-color: black;
     color: white;
     padding: 5px;
     border-radius: 12px;
     cursor: pointer;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    width: 100px;
+    width: 150px;
     font-size: 14pt;
     margin-left: auto;
     margin-right: auto;
@@ -70,5 +70,9 @@ input {
     cursor: pointer;
 }
 
+.backButton:hover {
+    color:  #4D45DB;
+    cursor: pointer;
+}
 
 
