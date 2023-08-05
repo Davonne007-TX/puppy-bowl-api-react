@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Form.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function NewForm() {
   const [name, setName] = useState("")
@@ -119,6 +120,8 @@ export default function NewForm() {
         <button
           type="submit"
           className="submitButton">Submit</button>
+{/* 
+          <button onClick={() => {navigate('/allPlayers')}}>Back to Player</button> */}
       </form>
     </div>
   )

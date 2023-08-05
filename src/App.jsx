@@ -1,30 +1,26 @@
-import './App.css'
-import { useState } from 'react'
+import React from 'react'
+import Home from './components/Home'
 import AllPlayers from './components/AllPlayers'
-import SinglePlayer from './components/SinglePlayer'
 import NewForm from './components/NewForm'
-import NavBar from './components/NavBar'
+import { Routes, Route, Link } from 'react-router-dom'
 
-function App() {
-  const [selectedPlayer, setSelectedPlayer] = useState(null)
 
+export default function App() {
   return (
     <>
-      <h1>Puppy Bowl 2023</h1>
-      <NavBar />
-      <img src="/images/mainImage.jpg" className="mainPic" />
-      <NewForm />
-       
-      {selectedPlayer ? (
-        <SinglePlayer player={selectedPlayer} setSelectedPlayer={setSelectedPlayer} />
-      ) : (
-        <AllPlayers setSelectedPlayer={setSelectedPlayer} />
-      )}
-   </>
+      <Link to="/home">Home</Link>
+      <Link to="/allPlayers">Our Puppy Contenders</Link>
+      <Link to="/newForm">Add a new player</Link>
+
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/allPlayers" element={<AllPlayers />} />
+        <Route path="/newForm" element={<NewForm />} />
+    </Routes>
+    </>
   )
 }
 
-export default App
 
 
 

@@ -14,6 +14,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/*home component*/
+.mainPic {
+  width: 100%;
+  max-width: 1000px;
+}
+
 /*all players component*/
 section {
   width: 100%;
