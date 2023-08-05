@@ -8,12 +8,12 @@ import { Routes, Route, Link } from 'react-router-dom'
 export default function App() {
   return (
     <>
-      <Link to="/home">Home</Link>
+      <Link to="/">Home</Link>
       <Link to="/allPlayers">Our Puppy Contenders</Link>
       <Link to="/newForm">Add a new player</Link>
 
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/allPlayers" element={<AllPlayers />} />
         <Route path="/newForm" element={<NewForm />} />
     </Routes>
