@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Form.css'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 export default function NewForm() {
   const [name, setName] = useState("")
@@ -40,13 +40,17 @@ export default function NewForm() {
       const result = await response.json();
       console.log(result);
 
-      alert("Successfully added a new puppy to the roster")
-
     } catch (error) {
       console.log("Error", error);
       alert("Error adding new puppy. Please try again later.");
     }
   }
+
+//   function alertMessage() {
+//     alert("You have added a new dog for our Puppy Bowl 2023!")
+//   }
+
+//   let navigate = useNavigate();
 
   return (
     <div className="newForm">
