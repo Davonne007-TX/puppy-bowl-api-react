@@ -4,7 +4,7 @@ import '../App.css'
 export default function Home() {
   return (
     <div>
-           <img src="/images/mainImage.jpg" className="mainPic" />
+        <img src="/images/mainImage.jpg" className="mainPic" />
     </div>
   )
 }

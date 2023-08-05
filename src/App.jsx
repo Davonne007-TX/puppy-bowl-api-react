@@ -8,6 +8,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 export default function App() {
   return (
     <>
+      <h1>Puppy Bowl 2023</h1>
       <Link to="/">Home</Link>
       <Link to="/allPlayers">Our Puppy Contenders</Link>
       <Link to="/newForm">Add a new player</Link>
