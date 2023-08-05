@@ -2,14 +2,15 @@
 
 .newForm {
     width: 100%;
-    border: 2px solid white;
-    max-width: 1000px;
+    border: 5px solid white;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     padding-bottom: 2cqb;
-    margin-top: 20px;
+    margin-top: 80px;
     border-radius: 12px;
+    
 }
 
 form {
@@ -30,7 +31,7 @@ input {
     border-radius: 10px;
     font-size: 12pt;
     font-family: cursive;
-    width: 400px;
+    width: 300px
 }
 
 @media screen and (max-width: 600px ) {
@@ -59,6 +60,9 @@ input {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: 100px;
     font-size: 14pt;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .submitButton:hover {
