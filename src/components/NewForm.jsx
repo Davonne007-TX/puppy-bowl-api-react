@@ -79,7 +79,6 @@ export default function NewForm() {
             onChange={(e) => setImageUrl(e.target.value)} />
         </label>
 
-
         <label>
           Cohort Id:
           <input
