@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar'
 import { fetchAllPlayers, fetchTeams, deletePlayer } from "./API"
 
-export default function AllPlayers({ setSelectedPlayer }) {
+export default function AllPlayers({  setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
   const[searchPlayers, setSearch] = useState("");
   const[teams, setTeams] = useState([]);
