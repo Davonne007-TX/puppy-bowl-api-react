@@ -9,7 +9,7 @@ h1 {
   text-decoration: underline;
   font-family: 'Dela Gothic One', cursive;
   padding-bottom: 20px;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 .mainPic {
@@ -20,5 +20,19 @@ h1 {
   display: block;
   margin-top: 40px;
 }
+
+.navBar a {
+  font-family: 'Dela Gothic One', cursive;
+  margin: 20px;
+  color: white;
+  font-size: 14pt;
+}
+
+.navBar a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
 
 
