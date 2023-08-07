@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -21,6 +20,10 @@ h1 {
   margin-top: 40px;
 }
 
+li {
+  list-style-type: none;
+}
+
 .navBar a {
   font-family: 'Dela Gothic One', cursive;
   margin: 20px;
@@ -33,6 +36,10 @@ h1 {
   cursor: pointer;
 }
 
-
+@media screen and (max-width: 210px) {
+  .navBar li {
+    display: block;
+  }
+}
 
 

@@ -32,7 +32,6 @@ const [formData, setFormData] = useState( {
 
     } catch (error) {
       console.log("Error", error);
-      alert("Error adding new puppy. Please try again later.");
     }
   }
 

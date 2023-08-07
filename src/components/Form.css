@@ -8,11 +8,11 @@
     margin-right: auto;
     display: block;
     padding-bottom: 2cqb;
-    margin-top: 80px;
+    margin-top: 20px;
     border-radius: 12px;
     background-color: white;
     color: black;
-    padding: 20px;
+    padding: 10px;
 }
 
 form {
@@ -41,7 +41,6 @@ input {
     .form {
         width: 100%;
         max-width: 200px;
-      
     }
 
     input {

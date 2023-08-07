@@ -16,9 +16,9 @@ export default function App() {
         <h1>Puppy Bowl 2023</h1>
 
         <div className="navBar">
-          <Link to="/">Home</Link>
-          <Link to="/allPlayers">Our Puppy Contenders</Link>
-          <Link to="/newForm">Add a new player</Link>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/allPlayers">Our Puppy Contenders</Link></li>
+          <li><Link to="/newForm">Add a new player</Link></li>
       </div>
 
       <Routes>

@@ -23,7 +23,7 @@
 /*all players component*/
 section {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px;
   background-color: white;
   color: black;
   border-radius: 12px;
@@ -48,7 +48,7 @@ section {
 
 .puppy-container { 
  width: 100%;
- max-width: 800px;
+ max-width: 700px;
  display: block;
  background-color: black;
  margin-left: auto;
