@@ -23,9 +23,11 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/allPlayers" element={<AllPlayers setSelectedPlayer={setSelectedPlayer} />} /> 
+        <Route path="/allPlayers" element={<AllPlayers setSelectedPlayer={setSelectedPlayer} />} /> {/*tried adding the setSelectedPlayer here*/ }
         <Route path="/newForm" element={<NewForm />} />
     </Routes>
+
+    {/*tried adding a ternary here*/ }
    </>
   )
 }
