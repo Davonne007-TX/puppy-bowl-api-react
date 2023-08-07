@@ -22,6 +22,12 @@ h1 {
 
 li {
   list-style-type: none;
+  display: inline;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
 }
 
 .navBar a {
@@ -36,10 +42,9 @@ li {
   cursor: pointer;
 }
 
-@media screen and (max-width: 210px) {
-  .navBar li {
-    display: block;
+@media screen and (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
   }
 }
-
 

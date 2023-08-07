@@ -45,80 +45,80 @@ const [formData, setFormData] = useState( {
   return (
     <div className="newForm">
       <h3>Please fill out form for New Player Entry:</h3><br />
-
+    
       <form onSubmit={submitThisForm}>
         <label>
           Name:
           <input
-            value={formData.name}
-            onChange={(e) => setFormData({...formData, name: e.target.value}) } />
+          value={formData.name}
+          onChange={(e) => setFormData({...formData, name: e.target.value}) } />
   
         </label>
 
         <label>
           Breed:
           <input
-            value={formData.breed}
-            onChange={(e) => setFormData({...formData, breed: e.target.value})} />
+          value={formData.breed}
+          onChange={(e) => setFormData({...formData, breed: e.target.value})} />
         </label>
 
         <label>
           Image URL:
           <input
-            value={formData.imageUrl}
-            onChange={(e) => setFormData({...formData, imageUrl: e.target.value})} />
+          value={formData.imageUrl}
+          onChange={(e) => setFormData({...formData, imageUrl: e.target.value})} />
          </label>
 
         <label>
           Cohort Id:
           <input
-            value={formData.cohortId}
-            onChange={(e) => setFormData({...formData, cohortId: e.target.value})} />
+          value={formData.cohortId}
+          onChange={(e) => setFormData({...formData, cohortId: e.target.value})} />
         </label>
 
         <label>
           Created At:
           <input
-            value={formData.createdAt}
-            onChange={(e) => setFormData({...formData, createdAt: e.target.value})} />
+          value={formData.createdAt}
+          onChange={(e) => setFormData({...formData, createdAt: e.target.value})} />
         </label>
 
         <label>
           ID:
           <input
-            value={formData.id}
-            onChange={(e) => setFormData({...formData, id: e.target.value})} />
+          value={formData.id}
+          onChange={(e) => setFormData({...formData, id: e.target.value})} />
         </label>
 
         <label>
           Status:
           <input
-            value={formData.status}
-            onChange={(e) => setFormData({...formData, status: e.target.value})} />
+          value={formData.status}
+          onChange={(e) => setFormData({...formData, status: e.target.value})} />
         </label>
 
         <label>
           Team Id:
           <input
-            value={formData.teamId}
-            onChange={(e) => setFormData({...formData, teamId: e.target.value})} />
+          value={formData.teamId}
+          onChange={(e) => setFormData({...formData, teamId: e.target.value})} />
         </label>
 
         <label>
           Updated At:
           <input
-            value={formData.updatedAt}
-            onChange={(e) => setFormData({...formData, updatedAt: e.target.value})} />
+          value={formData.updatedAt}
+          onChange={(e) => setFormData({...formData, updatedAt: e.target.value})} />
         </label>
 
         <button
-          type="submit"
-          className="submitButton">Submit</button>
+         type="submit"
+         className="submitButton">Submit</button>
 
          <button 
          type="button"
          className="backButton"
-         onClick={navigateToAllPlayers}>Back to Puppies</button>
+         onClick={navigateToAllPlayers}>Back to Players &#x1f415;</button>
       </form>
     </div>
   )

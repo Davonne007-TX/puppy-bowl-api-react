@@ -1,16 +1,14 @@
 /*New Player Added - Form*/
 
 .newForm {
-    width: 100%;
-    border: 5px solid white;
+    background-color: white;
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     padding-bottom: 2cqb;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 12px;
-    background-color: white;
     color: black;
     padding: 10px;
 }
