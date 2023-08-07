@@ -10,7 +10,9 @@
     padding-bottom: 2cqb;
     margin-top: 80px;
     border-radius: 12px;
-    
+    background-color: white;
+    color: black;
+    padding: 20px;
 }
 
 form {
@@ -31,13 +33,15 @@ input {
     border-radius: 10px;
     font-size: 12pt;
     font-family: cursive;
-    width: 300px
+    width: 300px;
+    margin: 5px;
 }
 
 @media screen and (max-width: 600px ) {
     .form {
         width: 100%;
         max-width: 200px;
+      
     }
 
     input {
