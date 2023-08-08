@@ -11,6 +11,25 @@ export const fetchAllPlayers = async () => {
     //   return[]
     }
 }
+
+//fetch player by id
+export const fetchPlayerById = async (id) => {
+    try {
+        const response = await fetch(
+            `https://fsa-puppy-bowl.herokuapp.com/api/COHORT-NAME/players/${id}`
+        )
+        const result = await response.json();
+        console.log(result)
+        return result
+
+    } catch (error) {
+      console.error(error);
+
+    }
+}
+
+
+
         
 //delete a puppy 
 export const deletePlayer = async (playerId) => {

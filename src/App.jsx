@@ -4,30 +4,28 @@ import Home from './components/Home'
 import AllPlayers from './components/AllPlayers'
 import NewForm from './components/NewForm'
 import { Routes, Route, Link } from 'react-router-dom'
-// import SinglePlayer from './components/SinglePlayer'
+import SinglePlayer from './components/SinglePlayer'
 
 
 export default function App() {
-  const [selectedPlayer, setSelectedPlayer] = useState(null) // i had this state here ,., and then I put the routes
+  const [selectedPlayer, setSelectedPlayer] = useState(null)
 
   return (
     <>
-  
-        <h1>Puppy Bowl 2023</h1>
+      <h1>Puppy Bowl 2023</h1>
 
-        <div className="navBar">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/allPlayers">Our Puppy Contenders</Link></li>
-          <li><Link to="/newForm">Add a new player</Link></li>
-      </div>
+      <div className="navBar">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/allPlayers">Our Puppy Contenders</Link></li>
+        <li><Link to="/newForm">Add a new player</Link></li>
+    </div>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/allPlayers" element={<AllPlayers setSelectedPlayer={setSelectedPlayer} />} /> {/*tried adding the setSelectedPlayer here*/ }
-        <Route path="/newForm" element={<NewForm />} />
+    <Routes>
+      <Route path="/" element={<Home />} />  
+      <Route path="/allPlayers" element={<AllPlayers setSelectedPlayer={setSelectedPlayer} />} />
+      <Route path="/player/:id" element={<SinglePlayer setSelectedPlayer={setSelectedPlayer} player={selectedPlayer} />} />
+      <Route path="/newForm" element={<NewForm />} />
     </Routes>
-
-    {/*tried adding a ternary here*/ }
    </>
   )
 }

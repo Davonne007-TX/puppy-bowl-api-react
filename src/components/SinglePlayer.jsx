@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { fetchPlayerById } from './API'
 
+export default function SinglePlayer({ setSelectedPlayer }) {
+  const [player, setPlayer] = useState({})
 
-export default function SinglePlayer({player, setSelectedPlayer}) {
+  let { id } = useParams()
 
+  useEffect(() => {  
+     const fetchPlayer = async () => {
+     const {data: {player}} = await fetchPlayerById(id);
+     setPlayer(player);
+  
+    }
+   fetchPlayer();
+  }, [])
 
   return (
     <div className="singlePuppy-container">

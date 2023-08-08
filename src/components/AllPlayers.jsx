@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar'
 import { fetchAllPlayers, fetchTeams, deletePlayer } from "./API"
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function AllPlayers({  setSelectedPlayer }) {
   const [players, setPlayers] = useState([]);
   const[searchPlayers, setSearch] = useState("");
   const[teams, setTeams] = useState([]);
+
+  const navigate = useNavigate();
+
+  console.log(players)
 
 //Fetch All Players
 useEffect(() => {  
@@ -62,11 +67,9 @@ const handleDelete = async (playerId) => {
           <p>Team Id: {player.teamId}</p>
           <p>Updated At: {player.updatedAt}</p>
 
-        <button
-          type="button" 
-          className="myButton" 
-          onClick={() => setSelectedPlayer(player)}>
-          See Details</button>
+        <Link to={`/player/${player.id}`}
+          className="myButton">
+          See Details</Link>
 
         <button
           type="button" 
