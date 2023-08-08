@@ -26,7 +26,7 @@ export default function SinglePlayer({ setSelectedPlayer }) {
         <p>ID: {player.id}</p>
         <p>Team Id: {player.teamId}</p>
         <p>Status {player.status}</p>
-        <Link to={"/allPlayers"} className="seeDetails">Back to List</Link>
+        <Link to={"/allPlayers"} className="goBack">Back to List</Link>
    </div>
   )
 }
