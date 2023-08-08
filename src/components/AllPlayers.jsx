@@ -68,7 +68,7 @@ const handleDelete = async (playerId) => {
           <p>Updated At: {player.updatedAt}</p>
 
         <Link to={`/player/${player.id}`}
-          className="myButton">
+          className="seeDetails">
           See Details</Link>
 
         <button

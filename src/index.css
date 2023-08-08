@@ -98,7 +98,7 @@ h2 {
   font-size: 2em;
 }
 
-p {
+p  {
   font-family: 'DM Serif Display', serif;
   font-size: 16pt;
   color: white;
@@ -109,7 +109,19 @@ p {
   color: black;
 }
 
-.myButton, .deleteButton{
+.seeDetails, a {
+  color: white;
+  margin: 20px;
+  font-size: 14pt;
+  padding: 8px;
+  background-color: #4D45DB;
+  border-radius: 12px;
+  width: 150px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+}
+
+ .deleteButton{
   background-color: #4D45DB;
   padding: 5px;
   border-radius: 12px;
@@ -119,15 +131,11 @@ p {
   font-size: 14pt;
 }
 
-.myButton {
-  margin: 20px;
-}
-
-.myButton:hover {
+.deleteButton:hover {
   color: black;
 }
 
-.deleteButton:hover {
+.seeDetails:hover {
   color: black;
 }
 
