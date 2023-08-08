@@ -15,6 +15,10 @@ const [formData, setFormData] = useState( {
   updatedAt: "",
 })
 
+function message() {
+  alert("Player form submitted, go back to list to see Player")
+}
+
   const submitThisForm = async (e) => {
     e.preventDefault();
 
@@ -113,7 +117,8 @@ const [formData, setFormData] = useState( {
 
         <button
          type="submit"
-         className="submitButton">Submit</button>
+         className="submitButton"
+         onClick={message}>Submit</button>
 
          <button 
          type="button"
