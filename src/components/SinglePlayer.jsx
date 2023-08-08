@@ -9,9 +9,8 @@ export default function SinglePlayer({ setSelectedPlayer }) {
 
   useEffect(() => {  
      const fetchPlayer = async () => {
-     const {data: {player}} = await fetchPlayerById(id);
-     setPlayer(player);
-  
+       const {data: {player}} = await fetchPlayerById(id);
+       setPlayer(player);
     }
    fetchPlayer();
   }, [])
