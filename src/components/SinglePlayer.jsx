@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { fetchPlayerById } from './API'
 
 export default function SinglePlayer({ setSelectedPlayer }) {
@@ -26,8 +26,7 @@ export default function SinglePlayer({ setSelectedPlayer }) {
         <p>ID: {player.id}</p>
         <p>Team Id: {player.teamId}</p>
         <p>Status {player.status}</p>
-        <button className="goBack" onClick={() => setSelectedPlayer(null)}>
-          Back to List</button>
+        <Link to={"/allPlayers"} className="seeDetails">Back to List</Link>
    </div>
   )
 }
