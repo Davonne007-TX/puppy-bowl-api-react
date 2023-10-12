@@ -42,7 +42,7 @@ const handleDelete = async (playerId) => {
 }
 
   return (
-    <>
+    <>  
     <section>
       <h2>Our Puppy Competitors</h2>
       <p className="searchDescription">Search for player below &#x2199;</p>
