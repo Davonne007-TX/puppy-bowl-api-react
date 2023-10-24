@@ -4,15 +4,20 @@
   text-align: center;
 }
 
-h1 {
+.heading1 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.puppyBowl {
   text-decoration: underline;
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Dela Gothic One", cursive;
   padding-bottom: 20px;
   font-size: 3em;
 }
 
 .mainPic {
-  width:100%;
+  width: 100%;
   max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
@@ -31,7 +36,7 @@ li {
 }
 
 .navBar a {
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Dela Gothic One", cursive;
   margin: 20px;
   color: white;
   font-size: 14pt;
@@ -47,5 +52,3 @@ li {
     flex-direction: column;
   }
 }
-
-
