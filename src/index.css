@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #4D45DB;
+  background-color: #4d45db;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -35,27 +35,27 @@ section {
 
 .dogImages {
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   border-radius: 12px;
-  border: 4px solid #4D45DB;
+  border: 4px solid #4d45db;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .dogImages {
     width: 240px;
   }
 }
 
-.puppy-container { 
- width: 100%;
- max-width: 700px;
- display: block;
- background-color: black;
- margin-left: auto;
- margin-right: auto;
- padding-bottom: 20px;;
- border-radius: 12px;
- margin-bottom: 20px;;
+.puppy-container {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -89,44 +89,45 @@ section {
 }
 
 h2 {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: "Luckiest Guy", cursive;
   padding-top: 20px;
   font-size: 2.3em;
 }
 
 .puppiesName {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
-p  {
-  font-family: 'DM Serif Display', serif;
+p {
+  font-family: "DM Serif Display", serif;
   font-size: 16pt;
   color: white;
 }
 
 .searchDescription {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: "Luckiest Guy", cursive;
   color: black;
 }
 
-.seeDetails, a {
+.seeDetails,
+a {
   color: white;
   margin: 20px;
   font-size: 14pt;
   padding: 8px;
-  background-color: #4D45DB;
+  background-color: #4d45db;
   border-radius: 12px;
   width: 150px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-decoration: none;
 }
 
- .deleteButton{
-  background-color: #4D45DB;
+.deleteButton {
+  background-color: #4d45db;
   padding: 8px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   width: 150px;
   font-size: 14pt;
 }
@@ -154,11 +155,11 @@ p  {
 }
 
 .goBack {
-  background-color: #4D45DB;
+  background-color: #4d45db;
   padding: 10px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   width: 150px;
   font-size: 14pt;
 }
@@ -166,5 +167,3 @@ p  {
 .goBack:hover {
   color: black;
 }
-
-
