@@ -109,6 +109,10 @@ p {
   color: black;
 }
 
+.seeDetails {
+  padding: 10px;
+}
+
 .seeDetails,
 .deleteButton,
 a {
@@ -121,7 +125,10 @@ a {
   font-family: "Times New Roman", Times, serif;
   text-decoration: none;
   font-weight: bold;
-  padding: 5px;
+}
+
+.deleteButton {
+  padding: 8px;
 }
 
 .deleteButton:hover {
@@ -138,6 +145,10 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .seeDetails {
+    padding: 2px;
   }
 }
 
