@@ -1,21 +1,21 @@
 /*New Player Added - Form*/
 .newForm {
-    background-color: white;
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    padding-bottom: 2cqb;
-    margin-top: 40px;
-    border-radius: 12px;
-    color: black;
-    padding: 10px;
+  background-color: white;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-bottom: 2cqb;
+  margin-top: 40px;
+  border-radius: 12px;
+  color: black;
+  padding: 10px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
@@ -25,54 +25,53 @@ form {
 }
 
 input {
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    font-size: 12pt;
-    font-family: cursive;
-    width: 300px;
-    margin: 5px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  font-size: 12pt;
+  font-family: cursive;
+  width: 300px;
+  margin: 5px;
 }
 
-@media screen and (max-width: 600px ) {
-    .form {
-        width: 100%;
-        max-width: 200px;
-    }
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100%;
+    max-width: 200px;
+  }
 
-    input {
-        width: 150px;
-    }
+  input {
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 350px) {
-    input {
-        width: 100px;
-    }
+  input {
+    width: 100px;
+  }
 }
 
-.submitButton, .backButton {
-    background-color: black;
-    color: white;
-    padding: 5px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    width: 150px;
-    font-size: 14pt;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+.submitButton,
+.backButton {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 150px;
+  font-size: 14pt;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .submitButton:hover {
-    color:  #4D45DB;
-    cursor: pointer;
+  color: #4d45db;
+  cursor: pointer;
 }
 
 .backButton:hover {
-    color:  #4D45DB;
-    cursor: pointer;
+  color: #4d45db;
+  cursor: pointer;
 }
-
-
