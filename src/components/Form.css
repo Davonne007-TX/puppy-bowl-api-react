@@ -58,7 +58,8 @@ input {
   padding: 5px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
   width: 150px;
   font-size: 14pt;
   margin-left: auto;
