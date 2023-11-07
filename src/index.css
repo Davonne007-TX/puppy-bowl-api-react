@@ -46,6 +46,11 @@ section {
   }
 }
 
+@media screen and (max-width: 414px) {
+  .dogImages {
+    width: 200px;
+  }
+}
 .puppy-container {
   width: 100%;
   max-width: 700px;
