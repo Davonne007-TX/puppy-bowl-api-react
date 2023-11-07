@@ -1,6 +1,6 @@
 #Block 29: Putting it all together
 
-#Deployed Site: https://6537f22bccb7a714739ed52b--deluxe-hummingbird-7cc1a5.netlify.app/
+#Deployed Site: https://jazzy-queijadas-8d9d5f.netlify.app/
 
 - The API
   You can find the documentation for our "Puppy Bowl" API hereLinks to an external site.. You have seen this before, but it is a good idea to re-read through it to remember what routes are available to you to call, and what type of data you'll be working with in this project.

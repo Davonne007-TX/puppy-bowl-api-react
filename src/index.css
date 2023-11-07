@@ -110,28 +110,18 @@ p {
 }
 
 .seeDetails,
+.deleteButton,
 a {
   color: white;
   margin: 20px;
   font-size: 14pt;
-  padding: 8px;
   background-color: #4d45db;
   border-radius: 12px;
   width: 150px;
   font-family: "Times New Roman", Times, serif;
   text-decoration: none;
   font-weight: bold;
-}
-
-.deleteButton {
-  background-color: #4d45db;
-  padding: 8px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-family: "Times New Roman", Times, serif;
-  width: 150px;
-  font-size: 14pt;
-  font-weight: bold;
+  padding: 5px;
 }
 
 .deleteButton:hover {
@@ -140,6 +130,15 @@ a {
 
 .seeDetails:hover {
   color: black;
+}
+
+@media screen and (max-width: 375px) {
+  .details-delete-bts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*SinglePlayer Component */

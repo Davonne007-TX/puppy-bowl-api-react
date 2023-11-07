@@ -61,17 +61,19 @@ export default function AllPlayers({ setSelectedPlayer }) {
               <p>Team Id: {player.teamId}</p>
               <p>Updated At: {player.updatedAt}</p>
 
-              <Link to={`/player/${player.id}`} className="seeDetails">
-                See Details
-              </Link>
+              <div className="details-delete-bts">
+                <Link to={`/player/${player.id}`} className="seeDetails">
+                  See Details
+                </Link>
 
-              <button
-                type="button"
-                className="deleteButton"
-                onClick={() => handleDelete(player.id)}
-              >
-                Delete Player
-              </button>
+                <button
+                  type="button"
+                  className="deleteButton"
+                  onClick={() => handleDelete(player.id)}
+                >
+                  Delete Player
+                </button>
+              </div>
             </div>
           );
         })}
