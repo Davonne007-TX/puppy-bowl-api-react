@@ -11,13 +11,13 @@ export default function App() {
 
   return (
     <>
-      <div className="heading1">
+      <header className="heading1">
         <Link to="/" className="puppyBowl">
           Puppy Bowl 2023
         </Link>
-      </div>
+      </header>
 
-      <div className="navBar">
+      <nav className="navBar">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -27,7 +27,7 @@ export default function App() {
         <li>
           <Link to="/newForm">Add a new player</Link>
         </li>
-      </div>
+      </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />

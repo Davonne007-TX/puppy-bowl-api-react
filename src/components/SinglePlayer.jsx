@@ -18,7 +18,7 @@ export default function SinglePlayer({ setSelectedPlayer }) {
   }, []);
 
   return (
-    <div className="singlePuppy-container">
+    <section className="singlePuppy-container">
       <h2>You have Selected Puppy Contender &#x2199;</h2>
       <p className="puppiesName">{player.name}</p>
       <img src={player.imageUrl} className="dogImages" />
@@ -30,6 +30,6 @@ export default function SinglePlayer({ setSelectedPlayer }) {
       <Link to={"/allPlayers"} className="goBack">
         Back to List
       </Link>
-    </div>
+    </section>
   );
 }

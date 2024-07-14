@@ -50,7 +50,7 @@ export default function AllPlayers({ setSelectedPlayer }) {
 
         {searchedPuppies.map((player) => {
           return (
-            <div key={player.id} className="puppy-container">
+            <section key={player.id} className="puppy-container">
               <p className="puppiesName">{player.name}</p>
               <img src={player.imageUrl} className="dogImages" />
               <p>Breed: {player.breed}</p>
@@ -74,7 +74,7 @@ export default function AllPlayers({ setSelectedPlayer }) {
                   Delete Player
                 </button>
               </div>
-            </div>
+            </section>
           );
         })}
       </section>

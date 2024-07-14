@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './SearchBar.css';
+import React, { useState } from "react";
+import "./SearchBar.css";
 
 export default function SearchBar({ value, onChange }) {
   const [input, setInput] = useState(value);
@@ -7,11 +7,11 @@ export default function SearchBar({ value, onChange }) {
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     setInput(inputValue);
-    onChange(inputValue); 
+    onChange(inputValue);
   };
 
   return (
-    <div className="search">
+    <section className="search">
       <input
         type="text"
         placeholder="Search"
@@ -19,9 +19,6 @@ export default function SearchBar({ value, onChange }) {
         className="searchBar"
         onChange={handleInputChange}
       />
-    </div>
+    </section>
   );
 }
-
-
-
